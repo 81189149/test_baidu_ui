@@ -34,7 +34,7 @@ jobs:
         run: |
           pytest
 
-      - name: 生成 Allure 报告
+      - name: 生成 Allure 报告1
         run: |
           allure generate allure-results --clean -o allure-report
 
