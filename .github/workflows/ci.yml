@@ -1,0 +1,34 @@
+name: Playwright + Allure CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 代码
+        uses: actions/checkout@v4
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: 安装依赖
+        run: |
+          pip install -r requirements.txt
+          playwright install --with-deps
+
+      - name: 运行测试
+        run: |
+          pytest
+
+      - name: 上传 Allure 结果
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results
+          path: allure-results
