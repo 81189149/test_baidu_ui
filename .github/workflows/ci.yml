@@ -1,19 +1,18 @@
 name: Playwright + Allure CI
 
-
 on:
   push:
     branches: [ main ]
 
   schedule:
-    - cron: '0 1 * * *'   # 中国每天9点执行
+    - cron: '0 1 * * *'
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-    
+
       - name: Checkout 代码
         uses: actions/checkout@v4
 
@@ -21,25 +20,24 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-
-      - name: Cache pip
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          cache: 'pip'
 
       - name: 安装依赖
         run: |
           pip install -r requirements.txt
-          playwright install --with-deps
+
+      - name: 安装 Playwright 浏览器
+        run: |
+          playwright install chromium
+
+      - name: 安装 Java (Allure需要)
+        run: |
+          sudo apt-get update
           sudo apt-get install -y default-jre
 
       - name: 安装 Allure
         run: |
-          wget https://github.com/allure-framework/allure2/releases/latest/download/allure-2.37.0.tgz
-          tar -zxvf allure-2.37.0.tgz
-          sudo mv allure-2.37.0 /opt/allure
-          sudo ln -s /opt/allure/bin/allure /usr/bin/allure
+          npm install -g allure-commandline --save-dev
 
       - name: 运行测试
         run: |
