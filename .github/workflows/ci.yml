@@ -1,8 +1,12 @@
 name: Playwright + Allure CI
 
+
 on:
   push:
     branches: [ main ]
+
+  schedule:
+    - cron: '0 1 * * *'   # 中国每天9点执行
 
 jobs:
   test:
