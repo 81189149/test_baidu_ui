@@ -7,7 +7,7 @@ import allure
 @allure.title("验证 baidu.com 页面标题")
 def test_example(page):
 
-    with allure.step("打开网站"):
+    with allure.step("打开百度网站"):
         page.goto("https://www.baidu.com")
 
     with allure.step("获取标题"):
