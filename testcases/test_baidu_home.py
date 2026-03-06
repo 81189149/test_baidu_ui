@@ -10,7 +10,7 @@ def test_example(page):
     with allure.step("打开百度网站"):
         page.goto("https://www.baidu.com")
 
-    with allure.step("获取标题"):
+    with allure.step("获取_标题"):
         title = page.title()
 
     with allure.step("断言标题"):
