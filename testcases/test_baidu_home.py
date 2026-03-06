@@ -13,5 +13,5 @@ def test_example(page):
     with allure.step("获取_标题"):
         title = page.title()
 
-    with allure.step("断言标题"):
+    with allure.step("断言_标题"):
         assert "百度" in title
