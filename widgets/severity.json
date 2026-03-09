@@ -1,1 +1,1 @@
-[{"uid":"75c24466000a99e7","name":"验证 baidu.com 页面标题","time":{"start":1773036068236,"stop":1773036074412,"duration":6176},"status":"passed","severity":"normal"}]
+[{"uid":"8f39eea65739a47e","name":"验证 baidu.com 页面标题","time":{"start":1773051241986,"stop":1773051248662,"duration":6676},"status":"passed","severity":"normal"},{"uid":"63775ab593bd062d","name":"test_error[chromium]","time":{"start":1773051248702,"stop":1773051253279,"duration":4577},"status":"failed","severity":"normal"}]
