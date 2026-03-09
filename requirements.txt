@@ -2,5 +2,4 @@
 pytest-playwright
 playwright
 allure-pytest
-ImageGrab
-AttachmentType
+Pillow
