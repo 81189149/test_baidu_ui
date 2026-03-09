@@ -3,5 +3,4 @@ pytest-playwright
 playwright
 allure-pytest
 ImageGrab
-io
 AttachmentType
