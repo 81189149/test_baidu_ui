@@ -40,11 +40,12 @@ jobs:
       - name: 安装 Allure
         run: |
           npm install -g allure-commandline --save-dev
-        continue-on-error: true
+        
 
       - name: 运行测试
         run: |
           pytest
+        continue-on-error: true
 
       - name: 生成 Allure 报告
         run: |
