@@ -23,6 +23,9 @@ def test_error(page):
 
     with allure.step("打开百度网站"):
         page.goto("https://www.baidu.com")
+        page.bring_to_front()  # 该页面置于最前端
+        page.wait_for_load_state("networkidle")  # 页面加载
+        page.wait_for_load_state("")  # 页面加载
 
     with allure.step("获取_标题"):
         title = page.title()
