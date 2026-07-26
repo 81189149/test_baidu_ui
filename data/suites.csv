@@ -1,3 +1,3 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","12342","验证 baidu.com 页面标题","testcases","2026-07-25","passed","2026-07-25","","test_baidu_home","",""
-"","8644","test_error[chromium]","testcases","2026-07-25","failed","2026-07-25","","test_baidu_home","",""
+"","9671","test_error[chromium]","testcases","2026-07-26","failed","2026-07-26","","test_baidu_home","",""
+"","6040","验证 baidu.com 页面标题","testcases","2026-07-26","passed","2026-07-26","","test_baidu_home","",""
